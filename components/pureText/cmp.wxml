@@ -1,0 +1,8 @@
+<view class="pureText">
+    <view class="mainText">
+        <text>{{mainTitle}}</text>
+    </view>
+    <view class="seText">
+        <text>{{subHead}}</text>
+    </view>
+</view>

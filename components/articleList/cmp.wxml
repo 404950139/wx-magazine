@@ -1,0 +1,9 @@
+
+<view class="container">
+    <S-article wx:for="{{articleList}}" 
+               articleList="{{item}}" 
+               wx:key="{{artId}}"
+               class="article" />
+    <S-loading hidden="{{!loading}}" class="loading" />
+    <text class="noMoreData" wx:if="{{noMoreData}}">没有更多了~</text>
+</view>

@@ -1,0 +1,10 @@
+.pureText {
+    padding:0 20rpx;
+}
+.mainText {
+    font-size:40rpx;
+    margin-bottom:20rpx;
+}
+.seText {
+    font-size:30rpx;
+}

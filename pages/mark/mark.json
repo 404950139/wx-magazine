@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "S-articleList": "/components/articleList/cmp",
+    "S-imgBtn": "/components/imgBtn/cmp"
+  }
+}

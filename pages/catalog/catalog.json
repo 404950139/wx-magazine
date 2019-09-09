@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "S-subscribe": "/components/subscribe/cmp",
+    "S-tagLIst": "/components/tagLIst/cmp",
+    "S-add": "/components/add/cmp",
+    "S-search": "/components/search/cmp"
+  }
+}

@@ -1,0 +1,13 @@
+
+<S-nav class="nav" bindnav="onNav" />
+<S-recommend recommend="{{recommend}}" magazineId="{{magazineId}}" class="recommend" />
+<view class="loading-container" wx:if="{{loading}}">
+    <S-loading class="loading" />
+</view>
+<S-tagLIst markList="{{markList}}">
+    <S-add slot="before" wx:if="{{magazineId == 0}}" />
+    <view slot="after" class="to-catalog" catch:tap="onCatalog">•••</view>
+</S-tagLIst>
+<S-articleList articleList="{{articleList}}" 
+               more="{{getMore}}" 
+               magazineId="{{magazineId}}" />

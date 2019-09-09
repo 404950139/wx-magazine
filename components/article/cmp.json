@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "S-bigImg": "/components/bigImg/cmp",
+    "S-pureText": "/components/pureText/cmp",
+    "S-imgText": "/components/imgText/cmp",
+    "S-nineImg": "/components/nineImg/cmp",
+    "S-video": "/components/video/cmp",
+    "S-tag": "/components/tag/cmp",
+    "S-more": "/components/more/cmp",
+    "S-like": "/components/like/cmp",
+    "S-article": "/components/article/cmp",
+    "S-imgBtn": "/components/imgBtn/cmp"
+  }
+}

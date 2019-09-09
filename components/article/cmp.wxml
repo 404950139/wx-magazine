@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="mark-container">
+        <image class="avator" src="{{articleList.mark.avatar || articleList.imgArray[0]}}" />
+        <text class="text">{{articleList.mark.people}}等{{articleList.mark.count}}人马克了</text>
+    </view>
+
+    <view>
+        <S-bigImg wx:if="{{articleList.type === 0}}"
+                  imgSrc="{{articleList.imgArray[0]}}"
+                  mainTitle="{{articleList.mainTitle}}" />
+        <S-nineImg wx:elif="{{articleList.type === 1}}"
+                   imgArray="{{articleList.imgArray}}"
+                   mainTitle="{{articleList.mainTitle}}" />
+        <S-imgText wx:elif="{{articleList.type === 2}}"
+                   mainTitle="{{articleList.mainTitle}}"
+                   subHead="{{articleList.subHead}}"
+                   imgSrc="{{articleList.imgArray[0]}}" />
+        <S-video wx:elif="{{articleList.type === 3}}"
+                 mainTitle="{{articleList.mainTitle}}"
+                 src="{{articleList.video.src}}"
+                 duration="{{articleList.video.duration}}"
+                 poster="{{articleList.video.poster}}"
+                 videoId="{{articleList.videoId}}" />
+        <S-pureText wx:else
+                    mainTitle="{{articleList.mainTitle}}"
+                    subHead="{{articleList.subHead}}" />
+    </view>
+    <view class="control-container">
+        <view>
+            <S-tag tag="{{articleList.tag || '读书'}}" tagId="{{articleList.tagId}}" />
+        </view>
+        <view class="control-box">
+            <S-more tag="{{articleList.tag}}" class="box" />
+            <S-imgBtn opentype="share" class="box img-btn">
+                <image src="/images/mark/relay.png" slot="img" />
+            </S-imgBtn>
+            <S-like like="{{like}}" class="box" catch:onSetLike="onSetLike" />
+        </view>
+    </view>
+</view>

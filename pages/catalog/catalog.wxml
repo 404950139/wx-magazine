@@ -1,0 +1,26 @@
+<view class="container">
+    
+    <S-search value="{{searchText}}" />
+
+    <view class="mark-container">
+        <view class="mark-control">
+            <view class="my-magazine">我的杂志</view>
+            <view class="manage-magazine">管理杂志</view>
+        </view>
+        <S-tagLIst markList="{{myTagList}}">
+            <S-add slot="before" />
+        </S-tagLIst>
+    </view>
+
+    <view>
+        <view  class="tag-list-container" wx:for="{{tagInfoList}}" wx:for-item="tagInfoItem" wx:key="{{title}}">
+            <view>{{tagInfoItem.title}} ></view>
+            <view>
+                <view wx:for="{{tagInfoItem.tagList}}" class="tag" wx:key="{{item.tagId}}">
+                    <view class="tag-text"># {{item.tag}}</view>
+                    <S-subscribe tag="{{item.tag}}" tagId="{{item.tagId}}" catch:tap="onTap" />
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+<view class="container {{subscription == true ? 'subscibe' : ''}}" catch:tap="onTap">{{subscription == true ? '已订阅' : '订阅'}}</view>

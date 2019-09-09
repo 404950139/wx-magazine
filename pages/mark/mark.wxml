@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="user-container">
+        <view class="user-info">
+            <view class="user-name">{{userInfo.nickName}}</view>
+            <view class="user-avatar">
+                <image wx:if="{{authorized}}" src="{{userInfo.avatarUrl}}" />
+                <S-imgBtn wx:else class="get-user-info" bind:onUserInfo="onUserInfo" opentype="getUserInfo">
+                    <image src="/images/mark/login.png" slot="img" />
+                </S-imgBtn>
+            </view>
+        </view>
+        <view class="share">
+            <S-imgBtn opentype="share">
+                <image src="/images/mark/relay.png" slot="img" />
+            </S-imgBtn>
+        </view>
+    </view>
+    <S-articleList articleList="{{articleList}}" />
+</view>
